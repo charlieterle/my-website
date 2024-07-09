@@ -4,20 +4,21 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Charles Dieterle's Homepage</title>
-    <!--Link to stylesheet-->
-    <!--Link to script (if needed)-->
+    <link href="styles/index.css" rel="stylesheet" />
+    <script src="scripts/index.js" defer></script>
 </head>
 
 <body>
-    <div class="topnav">
+    <div class="topnav" id="topnav">
         <a href="#about" class="active">About</a>
         <a href="#contact">Contact</a>
         <a href="#projects">Projects</a>
-        <!-- check https://www.w3schools.com/howto/howto_js_topnav_responsive.asp for how to finsh implementing the below line-->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+        <a href="javascript:void(0);" title="OpenMenu" class="icon" onclick="openMenu()">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
         </a>
     </div>
     <h1>Charles Dieterle</h1>
