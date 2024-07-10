@@ -19,7 +19,7 @@ body {
     text-align: center;
     padding: 0.8em 0.8em;
     text-decoration: none;
-    font-size: 1.15em;
+    font-size: 1em;
     transition: 0.2s;
 }
 
@@ -55,7 +55,7 @@ body {
         width: 20px;
         height: 3px;
         background-color: #f2f2f2;
-        margin: 3px 0;
+        margin: 3.5px 0;
         transition: inherit;
         border-radius: 3px;
     }
@@ -89,4 +89,29 @@ body {
     .topnav.responsive a.icon .bar3 {
         transform: translate(0, -6px) rotate(45deg);
     }
+}
+
+.noto-sans-jp-ExtraLight {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.noto-sans-jp-Regular {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.noto-sans-jp-SemiBold {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.noto-sans-jp-Bold {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
