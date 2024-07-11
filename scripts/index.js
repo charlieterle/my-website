@@ -15,10 +15,8 @@ function menuActivate(e) {
     next.className = "active";
 }
 
-const aboutLink = document.getElementById("about-link");
-const contactLink = document.getElementById("contact-link");
-const projectsLink = document.getElementById("projects-link");
+sectionLinks = document.getElementsByClassName("section");
 
-aboutLink.addEventListener('click', (event) => menuActivate(event));
-contactLink.addEventListener('click', (event) => menuActivate(event));
-projectsLink.addEventListener('click', (event) => menuActivate(event));
+for (section of sectionLinks) {
+    section.addEventListener('click', (event) => menuActivate(event));
+}
