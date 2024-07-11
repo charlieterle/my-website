@@ -13,7 +13,6 @@ body {
 }
 
 .topnav a {
-    float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -21,6 +20,14 @@ body {
     text-decoration: none;
     font-size: 1em;
     transition: 0.2s;
+}
+
+.topnav a.section-select {
+    float: left;
+}
+
+.topnav a.lang-select {
+    float: right;
 }
 
 .topnav a:hover {
@@ -32,9 +39,13 @@ body {
     background-color: #333333;
 }
 
-.topnav a.active {
+.topnav a.section-select-active {
     background-color: #cd5c5c;
     color: #333333;
+}
+
+.topnav a.lang-select:is(.lang-select-active) {
+    display: none;
 }
 
 .topnav .icon {
@@ -42,7 +53,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .topnav a:not(.active) {
+    .topnav a:not(.section-select-active) {
         display: none;
     }
 

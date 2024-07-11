@@ -1,3 +1,4 @@
+// Removes and adds "responsive" class to the topnav element when menu opener is clicked
 function toggleMenu() {
     let topnav = document.getElementById("topnav");
     if (topnav.classList.contains("responsive")) {
@@ -8,15 +9,24 @@ function toggleMenu() {
     }
 }
 
-function menuActivate(e) {
+document.getElementById("open-menu").addEventListener('click', toggleMenu);
+
+function activate(e, className) {
     const next = e.target;
-    const previous = document.getElementsByClassName("active")[0];
-    previous.className = "";
-    next.className = "active";
+    const activeClass = className + "-active";
+    const previous = document.getElementsByClassName(activeClass);
+    for (el of previous) {
+        el.classList.remove(activeClass);
+    }
+    next.classList.add(activeClass);
 }
 
-sectionLinks = document.getElementsByClassName("section");
+const activateClasses = ["lang-select", "section-select"];
 
-for (section of sectionLinks) {
-    section.addEventListener('click', (event) => menuActivate(event));
+for (let i = 0; i < activateClasses.length; i++) {
+    let els = document.getElementsByClassName(activateClasses[i]);
+    for (el of els) {
+        el.addEventListener('click', (event) => activate(event, activateClasses[i]))
+        console.log(i);
+    }
 }
