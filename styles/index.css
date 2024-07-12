@@ -44,10 +44,6 @@ body {
     color: #333333;
 }
 
-.topnav a.lang-select:is(.lang-select-active) {
-    display: none;
-}
-
 .topnav .icon {
     display: none;
 }
@@ -87,6 +83,18 @@ body {
         float: none;
         display: block;
         text-align: left;
+    }
+
+    .topnav.responsive #japanese-button {
+        position: absolute;
+        right: 46px;
+        top: 0px;
+    }
+
+    .topnav.responsive #english-button {
+        position: absolute;
+        right: 120px;
+        top: 0px;
     }
 
     .topnav.responsive a.icon .bar1 {
